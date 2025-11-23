@@ -30,6 +30,9 @@ public class CinemaWithScanner04 {
 
                         if (row < 1 || row > 4 || column < 1 || column > 2) {
                             System.out.println(" Row / column umber is not available. Please enter a valid seat!");
+                        } else if (audience[row - 1][column - 1] != null) {
+                            System.out.println("This seat is already taken by : " + audience[row - 1][column - 1]);
+                            System.out.println("Please choose another seat!");
                         } else {
                             audience[row - 1][column - 1] = name;
                             System.out.println("Audience data saved successfully.");
