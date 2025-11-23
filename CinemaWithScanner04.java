@@ -28,6 +28,13 @@ public class CinemaWithScanner04 {
                         column = sc.nextInt();
                         sc.nextLine();
 
+                        if (row < 1 || row > 4 || column < 1 || column > 2) {
+                            System.out.println(" Row / column umber is not available. Please enter a valid seat!");
+                        } else {
+                            audience[row - 1][column - 1] = name;
+                            System.out.println("Audience data saved successfully.");
+                        }
+
                         audience[row - 1][column - 1] = name;
                         System.out.print("Are there any other audience to be added? (y/n) : ");
                         next = sc.nextLine();
