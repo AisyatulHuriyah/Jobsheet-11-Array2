@@ -49,11 +49,25 @@ public class CinemaWithScanner04 {
                     break;
 
                 case 2:
-                System.out.println("Show audience list : ");
+                System.out.println("\n=== AUDIENCE SEAT LIST ===");
+                int empty = 0, filled = 0;
+
+                    for (int i = 0; i < audience.length; i++) {
+                        for (int j = 0; j < audience[i].length; j++) {
+                            if (audience[i][j] == null) {System.out.print("***\t");empty++;
+                            } else {
+                                System.out.print(audience[i][j] + "\t");filled++;
+                            }
+                        }
+                        System.out.println();
+                    }
+                    System.out.println("\nFilled seats: " + filled);
+                    System.out.println("Empty seats: " + empty);
                 break;
 
                 case 3:
-                System.out.println("Program exit.");
+                    System.out.println("Program exit.");
+                    return;
 
                 default:
                     System.out.println("Invalid menu. Please input again between 1-3");
