@@ -3,6 +3,7 @@ public class Cinema04 {
         
         String[][] audience = new String[4][2];
 
+        System.out.println(audience.length);
         for (int i = 0; i < audience.length; i++) {
             System.out.println("Length of row " + (i + 1) + ": " + audience[i].length);
         }
